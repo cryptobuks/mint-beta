@@ -1,0 +1,801 @@
+{
+  "contract_name": "Rewards",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_total",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "rewardsFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateRewardForAddressAndPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "calculateRewardFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_timeHolder",
+          "type": "address"
+        },
+        {
+          "name": "_closeIntervalDays",
+          "type": "uint256"
+        }
+      ],
+      "name": "init",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "assetBalanceInPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "closePeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "periodUnique",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawReward",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "periodsLength",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "isCalculatedFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastClosedPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "totalDepositInPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timeHolder",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawRewardTotalFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawRewardFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "rewardsLeft",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        },
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateRewardForPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositBalanceInPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_asset",
+          "type": "address"
+        }
+      ],
+      "name": "registerAsset",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_period",
+          "type": "uint256"
+        }
+      ],
+      "name": "isClosed",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_assetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "calculateReward",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "periods",
+      "outputs": [
+        {
+          "name": "startDate",
+          "type": "uint256"
+        },
+        {
+          "name": "totalShares",
+          "type": "uint256"
+        },
+        {
+          "name": "shareholdersCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "closeInterval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_asset",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawRewardTotal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_total",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawn",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "payable": false,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "PeriodClosed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "assetAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "AssetRegistration",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "assetAddress",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "who",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "reward",
+          "type": "uint256"
+        }
+      ],
+      "name": "CalculateReward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "assetAddress",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "who",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawReward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "message",
+          "type": "bytes32"
+        }
+      ],
+      "name": "Error",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b611333806100196000396000f300606060405236156101435763ffffffff60e060020a6000350416630efe6a8b81146101555780630f09330b1461018857806316d65bb1146101b95780632ac148f5146101ef578063399ae7241461022257806343369c5914610252578063507a73281461028057806357bd8522146102a157806358d3232f146102c35780636abe602d146102f357806376807249146103125780638632779c146103485780639a24159b146103675780639f80785a14610389578063ab6053d3146103b2578063b54ee0f5146103e5578063b9e362e11461041b578063bb38786c14610446578063cce53fc414610476578063d312998f146104a4578063d340ef8a146104d1578063d5c78a28146104f0578063d82e396214610514578063ea4a110414610541578063f0deeda61461056f578063f6b003e51461058e578063fb26441f146105bb575b34610000576101535b610000565b565b005b3461000057610174600160a060020a03600435166024356044356105ee565b604080519115158252519081900360200190f35b34610000576101a7600160a060020a03600435811690602435166106a3565b60408051918252519081900360200190f35b3461000057610174600160a060020a03600435811690602435166044356106d0565b604080519115158252519081900360200190f35b3461000057610174600160a060020a03600435811690602435166108bf565b604080519115158252519081900360200190f35b3461000057610174600160a060020a03600435166024356108dc565b604080519115158252519081900360200190f35b34610000576101a7600160a060020a03600435166024356109a3565b60408051918252519081900360200190f35b34610000576101746109e9565b604080519115158252519081900360200190f35b34610000576101a7600435610b28565b60408051918252519081900360200190f35b3461000057610174600160a060020a0360043516602435610b54565b604080519115158252519081900360200190f35b34610000576101a7610b6a565b60408051918252519081900360200190f35b3461000057610174600160a060020a0360043581169060243516604435610b71565b604080519115158252519081900360200190f35b34610000576101a7610bc9565b60408051918252519081900360200190f35b34610000576101a7600435610be8565b60408051918252519081900360200190f35b3461000057610396610c14565b60408051600160a060020a039092168252519081900360200190f35b3461000057610174600160a060020a0360043581169060243516610c23565b604080519115158252519081900360200190f35b3461000057610174600160a060020a0360043581169060243516604435610c42565b604080519115158252519081900360200190f35b34610000576101a7600160a060020a0360043516610ef6565b60408051918252519081900360200190f35b3461000057610174600160a060020a0360043516602435610f08565b604080519115158252519081900360200190f35b34610000576101a7600160a060020a0360043516602435610f1e565b60408051918252519081900360200190f35b3461000057610174600160a060020a0360043516610f64565b604080519115158252519081900360200190f35b34610000576101a76111bb565b60408051918252519081900360200190f35b34610000576101746004356111c6565b604080519115158252519081900360200190f35b3461000057610174600160a060020a03600435166111db565b604080519115158252519081900360200190f35b34610000576105516004356111f7565b60408051938452602084019290925282820152519081900360600190f35b34610000576101a7611228565b60408051918252519081900360200190f35b3461000057610174600160a060020a036004351661122e565b604080519115158252519081900360200190f35b3461000057610174600160a060020a036004351660243560443561124c565b604080519115158252519081900360200190f35b60008054819033600160a060020a03908116911614156106995760046106126111bb565b815481101561000057906000526020600020906006020160005b50600160a060020a0386166000908152600482016020526040902054909150151561066c5760018082018054850190556003820180549091019055610677565b600181018054850190555b600160a060020a03851660009081526004820160205260409020839055600191505b5b5b509392505050565b600160a060020a038083166000908152600260209081526040808320938516835292905220545b92915050565b600060006000600484815481101561000057906000526020600020906006020160005b5091506106ff846111c6565b15806107235750600160a060020a0386166000908152600283016020526040902054155b1561077257604080517f5265776172642063616c63756c6174696f6e206661696c656400000000000000815290516000805160206112e88339815191529181900360200190a1600092506108b6565b600160a060020a03808716600090815260058401602090815260408083209389168352929052205460ff16156107ec57604080517f52657761726420697320616c72656164792063616c63756c6174656400000000815290516000805160206112e88339815191529181900360200190a1600092506108b6565b6001820154600160a060020a038087166000908152600485016020908152604080832054938b1683526002870190915290205402811561000057600160a060020a038089166000818152600260209081526040808320948c16808452948252808320805497909604968701909555828252600588018152848220848352815290849020805460ff1916600117905583518581529351949550919390927f5516c76261b5d394ec34e826fd3949c55ecf4e0310b26cb21ae7e427c6b8475692908290030190a3600192505b50509392505050565b60006108d383836108ce610bc9565b6106d0565b90505b92915050565b600454600090819011156108f2575060006106ca565b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0385161790556001828155600480549182018082558280158290116109735760060281600602836000526020600020918201910161097391905b8082111561096f57600080825560018201819055600382015560060161094e565b5090565b5b505050504260046000815481101561000057906000526020600020906006020160005b50555060015b92915050565b6000600482815481101561000057906000526020600020906006020160005b50600160a060020a0384166000908152600291909101602052604090205490505b92915050565b6000600060046109f76111bb565b815481101561000057906000526020600020906006020160005b5090504260015462015180028260000154011115610a7357604080517f43616e6e6f7420636c6f736520706572696f6420796574000000000000000000815290516000805160206112e88339815191529181900360200190a16000915061096f565b60048054809190600101815481835581811511610aca57600602816006028360005260206000209182019101610aca91905b8082111561096f57600080825560018201819055600382015560060161094e565b5090565b5b50505050426004610ada6111bb565b815481101561000057906000526020600020906006020160005b50556040517f3a273a3330d1f4c56aa39bf2b3df76adde3fd94f62ce06e19d173e66af02fa6390600090a1600191505b5090565b6000600482815481101561000057906000526020600020906006020160005b506003015490505b919050565b60006108d3833384610c42565b90505b92915050565b6004545b90565b6000600482815481101561000057906000526020600020906006020160005b50600160a060020a03808616600090815260059290920160209081526040808420928716845291905290205460ff1690505b9392505050565b60045460009060011415610bdc57610000565b50600454600119015b90565b6000600482815481101561000057906000526020600020906006020160005b506001015490505b919050565b600054600160a060020a031681565b60006108d38383610c3486866106a3565b610c42565b90505b92915050565b600160a060020a0383166000908152600360205260408120548190819081901515610cb157604080517f4e6f2072657761726473206c6566740000000000000000000000000000000000815290516000805160206112e88339815191529181900360200190a160009350610eec565b86600160a060020a03166370a08231306000604051602001526040518263ffffffff1660e060020a0281526004018082600160a060020a0316600160a060020a03168152602001915050602060405180830381600087803b156100005760325a03f1156100005750505060405180519050925086600160a060020a031663a9059cbb87876000604051602001526040518363ffffffff1660e060020a0281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050602060405180830381600087803b156100005760325a03f1156100005750506040515115159050610deb57604080517f4173736574207472616e73666572206661696c65640000000000000000000000815290516000805160206112e88339815191529181900360200190a160009350610eec565b86600160a060020a03166370a08231306000604051602001526040518263ffffffff1660e060020a0281526004018082600160a060020a0316600160a060020a03168152602001915050602060405180830381600087803b156100005760325a03f115610000575050604051519250505080820380610e6a88886106a3565b1015610e7557610000565b600160a060020a038088166000818152600260209081526040808320948b1680845294825280832080548790039055838352600382529182902080548690039055815189815291517fad71f93891cecc86a28a627d5495c28fabbd31cdd2e93851b16ce3421fdab2e59281900390910190a3600193505b5050509392505050565b60036020526000908152604090205481565b60006108d38333846106d0565b90505b92915050565b6000600482815481101561000057906000526020600020906006020160005b50600160a060020a0384166000908152600491909101602052604090205490505b92915050565b6000805460408051602090810184905281517f7bc1ed6300000000000000000000000000000000000000000000000000000000815291518493600160a060020a0380881694911692637bc1ed639260048084019382900301818887803b156100005760325a03f1156100005750505060405180519050600160a060020a0316141561103357604080517f417373657420697320616c726561647920726567697374657265640000000000815290516000805160206112e88339815191529181900360200190a1600091506111b5565b600461103d610bc9565b815481101561000057906000526020600020906006020160005b50600160a060020a0384166000908152600282016020526040902054909150156110c557604080517f417373657420697320616c726561647920726567697374657265640000000000815290516000805160206112e88339815191529181900360200190a1600091506111b5565b600160a060020a038084166000818152600360209081526040808320548151830184905281517f70a08231000000000000000000000000000000000000000000000000000000008152309096166004870152905190946370a082319360248083019493928390030190829087803b156100005760325a03f115610000575050604080518051600160a060020a0388166000818152600288016020818152868320989094038089556003855291869020805490920190915582529454825291517fcaef0d9e67b6bc7571f5233791743861e8909d89aedcb4e2efffad2d52297a4893509081900390910190a2600191505b50919050565b600454600019015b90565b6000816111d1610bc9565b101590505b919050565b60006111ef82336108ce610bc9565b6106d0565b90505b919050565b600481815481101561000057906000526020600020906006020160005b508054600182015460039092015490925083565b60015481565b60006111ef8233610c3485336106a3565b610c42565b90505b919050565b60008054819033600160a060020a0390811691161415610699576112748560008686016105ee565b50600461127f6111bb565b815481101561000057906000526020600020906006020160005b506001810180548690039055600160a060020a0386166000908152600482016020526040902084905590508215156112d8576003810180546000190190555b600191505b5b5b5093925050505600c0feee4291bd5b20db53763b87864bd1434da2717d6a9ba76efa4bafa8f6a99ca165627a7a72305820823e11b4a2b3ee7e0df66e5cfe9d4b3663b0d3706e1017d203de1ad9f07383730029",
+  "networks": {
+    "3": {
+      "events": {
+        "0x3a273a3330d1f4c56aa39bf2b3df76adde3fd94f62ce06e19d173e66af02fa63": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "PeriodClosed",
+          "type": "event"
+        },
+        "0xcaef0d9e67b6bc7571f5233791743861e8909d89aedcb4e2efffad2d52297a48": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "balance",
+              "type": "uint256"
+            }
+          ],
+          "name": "AssetRegistration",
+          "type": "event"
+        },
+        "0x5516c76261b5d394ec34e826fd3949c55ecf4e0310b26cb21ae7e427c6b84756": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "reward",
+              "type": "uint256"
+            }
+          ],
+          "name": "CalculateReward",
+          "type": "event"
+        },
+        "0xad71f93891cecc86a28a627d5495c28fabbd31cdd2e93851b16ce3421fdab2e5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawReward",
+          "type": "event"
+        },
+        "0xc0feee4291bd5b20db53763b87864bd1434da2717d6a9ba76efa4bafa8f6a99c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "message",
+              "type": "bytes32"
+            }
+          ],
+          "name": "Error",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x1ef132441baa98ee2afd2c51df0f750056dfe23b",
+      "updated_at": 1491498338953
+    },
+    "1491496103141": {
+      "events": {
+        "0x3a273a3330d1f4c56aa39bf2b3df76adde3fd94f62ce06e19d173e66af02fa63": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "PeriodClosed",
+          "type": "event"
+        },
+        "0xcaef0d9e67b6bc7571f5233791743861e8909d89aedcb4e2efffad2d52297a48": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "balance",
+              "type": "uint256"
+            }
+          ],
+          "name": "AssetRegistration",
+          "type": "event"
+        },
+        "0x5516c76261b5d394ec34e826fd3949c55ecf4e0310b26cb21ae7e427c6b84756": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "reward",
+              "type": "uint256"
+            }
+          ],
+          "name": "CalculateReward",
+          "type": "event"
+        },
+        "0xad71f93891cecc86a28a627d5495c28fabbd31cdd2e93851b16ce3421fdab2e5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "assetAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawReward",
+          "type": "event"
+        },
+        "0xc0feee4291bd5b20db53763b87864bd1434da2717d6a9ba76efa4bafa8f6a99c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "message",
+              "type": "bytes32"
+            }
+          ],
+          "name": "Error",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x170b1daf1c6e1b5f1a9693c2913d1ccefb0729b5",
+      "updated_at": 1491496196437
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1491498338953
+}
